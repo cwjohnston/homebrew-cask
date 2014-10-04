@@ -1,11 +1,11 @@
 class Chefdk < Cask
-  version '0.2.1-1'
-  sha256 'd4a6023e21c2c3cfb6773382ae7d6111e2de44ac1064aa2b1c0faddcd3bc1d13'
+  version '0.3.0-1'
+  sha256 'ad64ee257d8ab1966e2cb47c365c92343f19edf33f8884488d7aeaa4eeab7f62'
 
-  url 'https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.2.1-1.dmg'
+  url "https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-#{version}.dmg"
   homepage 'http://www.getchef.com/downloads/chef-dk/mac/'
 
-  install 'chefdk.pkg'
+  install "chefdk-#{version}.pkg"
   uninstall :pkgutil => 'com.getchef.pkg.chefdk',
             :files   => [
                          '/opt/chefdk/',
